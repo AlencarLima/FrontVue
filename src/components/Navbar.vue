@@ -2,7 +2,7 @@
     <nav id="menu">
         <ul>
             <li><router-link to="/chatbot">Chatbot</router-link></li>
-            <li><router-link to="/*[@id='ChatbotNumbers']">Interações Medicamentosas</router-link></li>
+            <li><router-link to="/">Interações Medicamentosas</router-link></li>
             <li><router-link to="/">Sobre</router-link></li>
             <li><router-link to="/">Contato</router-link></li>
         </ul>

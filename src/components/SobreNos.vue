@@ -50,4 +50,7 @@ div#ChatbotNumbers table {
 #members {
     width: 30%;
 }
+#nos {
+    padding: 30px;
+}
 </style>

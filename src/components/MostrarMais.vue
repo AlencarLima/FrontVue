@@ -19,7 +19,7 @@
             }
         },
         methods: {
-            leiaMais(textoBotao) {
+            leiaMais() {
                 this.aparecer = !this.aparecer;
                 if(!this.aparecer) {
                     this.seta = 'v';

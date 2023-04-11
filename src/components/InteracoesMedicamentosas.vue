@@ -18,6 +18,10 @@
 </script>
 
 <style scoped>
+#plus {
+    padding: 30px;
+    min-height: 200px;
+}
 span#text{
     font-family: "fontelogo", sans-serif;
     color: #08474E;

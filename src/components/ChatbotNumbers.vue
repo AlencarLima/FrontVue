@@ -5,9 +5,9 @@
         <hr>
             <table id="chat_table">
                 <tr>
-                    <td><img id="qa" src="_imagens/qa.png"></td>
-                    <td><img id="qa" src="_imagens/web_chat.png"></td>
-                    <td><img id="qa" src="_imagens/moedas.png"></td>
+                    <td><img id="qa" src="img/qa.png"></td>
+                    <td><img id="qa" src="img/web_chat.png"></td>
+                    <td><img id="qa" src="img/moedas.png"></td>
                 </tr>
                 <tr>
                     <td class="numbers">+8000</td>

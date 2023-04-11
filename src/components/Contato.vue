@@ -53,6 +53,7 @@ table#contato {
 #leftside{
     display: block;
     float: left;
+    padding: 10px;
 }
 #cont table{
     display: block;
