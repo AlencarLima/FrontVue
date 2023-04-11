@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  
   <router-view/>
+  <Footer/>
 </template>
 
+<script>
+  import Footer from './components/Footer.vue';
+  export default {
+    components: {
+      Footer
+    }
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@charset "UTF-8";
+body {
 
-nav {
-  padding: 30px;
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h1 {
+    font-family: "fontelogo", sans-serif;
+    font-size: 24px;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+a{
+    text-decoration: none;
+    color: #08474E;
+    font-weight: bold;
 }
 </style>
