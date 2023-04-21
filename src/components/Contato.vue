@@ -2,7 +2,7 @@
     <div id="cont">
         <div id="leftside">
             <h1>ENTRE EM CONTATO</h1>
-            <p id="text_contato">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet necessitatibus, unde rem aliquam amet atque culpa et corporis sit. Expedita totam beatae distinctio? Cum, maiores voluptatum! Est voluptatum expedita dolorum!</p>
+            <p id="text_contato">Tem alguma dúvida ou sugestão? Nos envie uma mensagem ou visite nossa sede.Estamos prontos para falar com você.</p>
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
         </div>
         

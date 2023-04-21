@@ -1,7 +1,8 @@
 <template>
     <div id="header-corpo">
         <h1 id="sec_title">CHATBOT IMBOT</h1>
-     <p id="chatbot_resume">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolore quis asperiores molestiae repudiandae! Laudantium ex, et odit ducimus neque deserunt sed culpa eligendi asperiores sit incidunt impedit similique nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima cumque minus quam sit ut temporibus quos cum hic cupiditate? Dolor, dicta molestiae rem at nemo aspernatur aperiam tenetur consequatur quis!</p>
+     <p id="chatbot_resume">Com Medruglt Chatbot você tem uma comunicação inteligente, automatizada, eficiente e que gera uma resposta rápida para qualquer interação medicamentosa que seus remédios possam ter.
+</p>
     <a class="button" href="/chatbot">COMEÇAR</a>
     </div>
 </template>

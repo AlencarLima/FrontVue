@@ -1,7 +1,7 @@
 <template>
     <div id="ChatbotNumbers">
         <h1>SOBRE NÓS</h1>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, enim. Ipsum enim ducimus, asperiores minus mollitia optio. Molestiae, consectetur eaque. Culpa aspernatur quos, saepe quod ipsam omnis blanditiis laudantium dicta!</P>
+        <P>A Medruglt Chatbot é um site criado por um grupo de alunos da Universidade UFABC para a aula de Engenharia de Software, contando com um especialista no grupo que trabalha na área, conseguiram desenvolver um site funcional e preciso para a busca de interações medicamentosas.</P>
         <table id="nos">
             <tr>
                 <td>Carlos</td>

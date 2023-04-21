@@ -5,7 +5,7 @@
 
     <div class="footer">
       <input type="text" id="input_mensagem" placeholder="Pergunte aqui...">
-      <button class="btn-submit" id="btn-submit" @click="MostrarMensagem()">Enviar</button>
+      <img src="/img/enviar.png" class="btn-submit" id="btn-submit" @click="MostrarMensagem()">
     </div>
     
     <table id="chat_exemplos" v-show="aparecer">
@@ -13,16 +13,16 @@
                 <td colspan="2" id="exemplo_string"><h1>EXEMPLOS</h1></td>
             </tr>
             <tr>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
+                <td class="exemplo"><p>Quais são as interações medicamentosas entre a varfarina e a aspirina?</p></td>
+                <td class="exemplo"><p>Qual é a interação entre o álcool e os medicamentos para ansiedade?</p></td>
             </tr>
             <tr>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
+                <td class="exemplo"><p>Posso tomar paracetamol enquanto estou em tratamento com antibióticos?</p></td>
+                <td class="exemplo"><p>Há alguma interação entre o ibuprofeno e a cafeína?</p></td>
             </tr>
             <tr>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
-                <td class="exemplo"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p></td>
+                <td class="exemplo"><p>É seguro tomar medicamentos para diabetes com medicamentos para hipertensão arterial?</p></td>
+                <td class="exemplo"><p>Qual é a interação entre a levodopa e os medicamentos para depressão?</p></td>
             </tr>
         </table>
     <div id="historico" v-show="aparecer_historico">
@@ -105,6 +105,11 @@ img#logo {
     border-radius: 5px;
     list-style-type: none;
 }
+img#btn-submit {
+  width: 20px;
+  padding: 5px;
+  
+}
 .box {
     position: fixed;
     float: block;
@@ -119,6 +124,8 @@ img#logo {
 }
 td.exemplo{
   background-color:#073036;
+  width: 40vw;
+  padding: 1% 2%;
 }
 .footer {
   text-align: center;
@@ -130,13 +137,13 @@ input {
   border-radius: 5px;
   padding: 5px;
 }
-.btn-submit {
-  padding: 5px;
-}
 table#chat_exemplos {
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   margin: 35px auto 70px auto;
-  width: 63%;
+  width: 63vw;
   min-height: 56vh;
 }
 #historico{
