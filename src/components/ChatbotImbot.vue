@@ -18,17 +18,16 @@
     padding: 9%;
 }
 #sec_title{
-    font-size: 35px;
+    font-size: 2.3rem;
 }
 p#chatbot_resume{
     margin-bottom: 25px;
-    width: 400px;
+    width: 50vw;
 }
 .button{
-    margin-top: 10px;
-    font-size: 22px;
-    padding: 10px 32px;
-    width: 1px;
+    margin-top: 10vh;
+    font-size: 1.4rem;
+    padding: 1.2vh 2vw;
     color: #fff;
     background: #08474E;
     border: 1px solid #555;
