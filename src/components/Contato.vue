@@ -8,24 +8,24 @@
         
         <table id="contato">
             <tr>
-                <td><label for="name">Nome</label></td>
+                <td class="td_camp"><label for="name">Nome</label></td>
                 <td><label for="last_name">Sobrenome</label></td>
             </tr>
-            <tr>
-                <td><input class="camp" type="text" name="Nome" size="40" placeholder="Ex: Rafaela"/></td>
-                <td class="camp"><input class="camp" type="text" name="Sobrenome" size="40" placeholder="Ex: Trindade"/></td>
+            <tr id="caralho">
+                <td class="td_camp"><input class="camp" type="text" name="Nome" size="38" placeholder="Ex: Rafaela"/></td>
+                <td class="camp"><input class="camp" type="text" name="Sobrenome" size="38" placeholder="Ex: Trindade"/></td>
             </tr>
             <tr>
-                <td><label for="email">Email</label></td>
+                <td class="td_camp"><label for="email">Email</label></td>
             </tr>
             <tr>
-                <td colspan="2"><input class="camp_email" type="text" name="Email" size="86" placeholder="Ex: rafa@gmail.com"/></td>
+                <td colspan="2"><input class="camp_email" type="text" name="Email" size="83.4" placeholder="Ex: rafa@gmail.com"/></td>
             </tr>
             <tr>
                 <td><label for="city">Mensagem</label></td>
             </tr>
             <tr>
-                <td colspan="2"><textarea cols="84" rows="5"></textarea></td>
+                <td colspan="2"><textarea cols="73" rows="5"></textarea></td>
             </tr>
             <tr>
                 <td id="limpar"><div class="button">LIMPAR</div></td>
@@ -88,6 +88,7 @@ h3 {
 }
 .camp {
     width: 45vw;
+    margin: 0;
 }
 
 .camp_email {
@@ -101,10 +102,17 @@ h3 {
     width: 95vw;
 }
 table#contato {
+    width: 98vw;
+
+}
+#contato > tbody {
+    width: 99vw;
+}
+tr#caralho {
     width: 95vw;
 }
 input {
-    width: 50vw;
+    width: 10px;
 }
 textarea {
     padding: 0;

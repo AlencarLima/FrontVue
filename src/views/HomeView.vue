@@ -39,7 +39,7 @@ h1#title {
 img#logo {
     position: fixed;
     z-index: 2;
-    left: 1px;
+    left: -1px;
     top: 8px;
     width: 30px;
     background-color: #08474E;
@@ -52,7 +52,7 @@ img#logo {
     position: fixed;
     float: block;
     z-index: 1;
-    left: 2px;
+
     top: 9px;
     width: 25px;
     height: 25px;

@@ -1,10 +1,10 @@
-<template>
+<template id="vai">
   <div class="box-questions">
     <router-link to="/"><img src="/img/casa.png" id="logo"></router-link>
     <div class="box"></div>
 
     <div class="footer">
-      <input type="text" id="input_mensagem" placeholder="Pergunte aqui...">
+      <input type="text" id="input_mensagem" placeholder="Pergunte aqui..." required>
       <img src="/img/enviar.png" class="btn-submit" id="btn-submit" @click="MostrarMensagem()">
     </div>
     
@@ -49,6 +49,7 @@ export default {
               this.aparecer = false
               this.aparecer_historico = true
               var mensagem = document.getElementById('input_mensagem').value
+              
               var historico_box = document.getElementById('historico')
 
               var box_mensagem_usuario = document.createElement('div')
@@ -67,8 +68,14 @@ export default {
               var resposta_chat = document.createElement('p')
               resposta_chat.className = 'mensagem_resposta'
               // resposta_chat.innerHTML = resposta
-              resposta_chat.innerHTML = 'Resposta do Chatbot'
-
+              if (mensagem == "") {
+                resposta_chat.innerHTML = 'Por favor, digite uma pergunta!'
+                
+              }
+              else {
+                resposta_chat.innerHTML = 'Resposta do Chatbot'
+              }
+               
               box_resposta_ia.appendChild(resposta_chat)
               historico_box.appendChild(box_resposta_ia)
 
@@ -80,12 +87,16 @@ export default {
     }
 </script>
 <style>
+p {
+  font-size: 18px;
+}
 .box-questions {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color:#08474E;
+  height: 88.1vh;
 }
 td p {
   color: white;
@@ -93,11 +104,12 @@ td p {
 h1 {
   color: #073036;
   font-size: 28px;
+  margin-top: 0;
 }
 img#logo {
     position: fixed;
     z-index: 2;
-    left: 1px;
+    left: -1px;
     top: 8px;
     width: 33px;
     background-color: #08474E;
@@ -117,7 +129,6 @@ img#btn-submit {
     position: fixed;
     float: block;
     z-index: 1;
-    left: 2px;
     top: 9px;
     width: 25px;
     height: 25px;
@@ -128,13 +139,15 @@ img#btn-submit {
 td.exemplo{
   background-color:#073036;
   width: 40vw;
-  padding: 1% 2%;
+  padding: 1%;
 }
 .footer {
   padding: 5%;
 }
 input {
   width: 80%;
+  font-size: 18px;
+  color: white;
   background-color: #073036;
   border-radius: 5px;
   padding: 5px;
@@ -146,15 +159,17 @@ table#chat_exemplos {
   align-items: center;
   margin: 35px auto 70px auto;
   width: 63vw;
-  min-height: 56vh;
+  height: 55vh;
+
 }
 #historico{
   padding: 1rem;
   overflow: auto;
+  -ms-overflow-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-height: 67vh;
+  height: 60vh;
 }
 .box_mensagem{
   display: flex;
@@ -181,5 +196,17 @@ table#chat_exemplos {
   text-align: left;
   color: white;
   padding: 5px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #073036;
+}
+@media screen and (max-width: 500px){
+.footer {
+  margin-top: -10px;
+  margin-left: 35px;
+}
 }
 </style>

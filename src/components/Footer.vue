@@ -1,6 +1,6 @@
 <template>
     <footer id="rodape">
-        &copy;Copyright @2023 IMBOT. Todo os direitos reservados.<br>
+        &copy;Copyright @2023 IMBOT. Todos os direitos reservados.<br>
     </footer>
     
 </template>
@@ -17,8 +17,9 @@ footer#rodape{
     text-align: center;
     border-top: 1px solid;
     background-color: #08474E;
-    padding: 20px;
+    padding: 2rem;
     color: white;
     font-family: "fontelogo", sans-serif;
+    height: 2.1vh;
 }
 </style>
