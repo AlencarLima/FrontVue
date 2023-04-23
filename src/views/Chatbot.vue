@@ -204,9 +204,16 @@ table#chat_exemplos {
   background-color: #073036;
 }
 @media screen and (max-width: 500px){
+p {
+  font-size: 12px;
+}
 .footer {
   margin-top: -10px;
   margin-left: 35px;
+}
+td.exemplo{
+  width: 100vw;
+  padding: 1%;
 }
 }
 </style>
