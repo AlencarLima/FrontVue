@@ -12,14 +12,14 @@
                 <td><label for="last_name">Sobrenome</label></td>
             </tr>
             <tr>
-                <td><input type="text" name="Nome" size="40" placeholder="Ex: Rafaela"/></td>
-                <td><input type="text" name="Sobrenome" size="40" placeholder="Ex: Trindade"/></td>
+                <td><input class="camp" type="text" name="Nome" size="40" placeholder="Ex: Rafaela"/></td>
+                <td class="camp"><input class="camp" type="text" name="Sobrenome" size="40" placeholder="Ex: Trindade"/></td>
             </tr>
             <tr>
                 <td><label for="email">Email</label></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="text" name="Email" size="86" placeholder="Ex: rafa@gmail.com"/></td>
+                <td colspan="2"><input class="camp_email" type="text" name="Email" size="86" placeholder="Ex: rafa@gmail.com"/></td>
             </tr>
             <tr>
                 <td><label for="city">Mensagem</label></td>
@@ -28,7 +28,7 @@
                 <td colspan="2"><textarea cols="84" rows="5"></textarea></td>
             </tr>
             <tr>
-                <td><div class="button">LIMPAR</div></td>
+                <td id="limpar"><div class="button">LIMPAR</div></td>
                 <td><div class="button">ENVIAR</div></td>
             </tr>
         </table>
@@ -59,13 +59,12 @@ table#contato {
     display: block;
     float: right;
     width: auto;
-    padding: 5px;
-    margin-right: 10px;
-    margin-top: 50px;
+
+
 }
 .button{
-    font-size: 22px;
-    padding: 10px 9px;
+    font-size: 1.4rem;
+    padding: 1.2vh 2vw;
     width: 160px;
     color: #fff;
     background: #08474E;
@@ -73,5 +72,44 @@ table#contato {
     text-align: center;
     font-family: "fontelogo", sans-serif;
     font-weight: bold;
+}
+#text_contato {
+    width: 45vw;
+}
+h3 {
+    width: 45vw;
+}
+@media screen and (max-width: 500px){
+#leftside {
+    text-align: center;
+}
+#limpar {
+    display: none;
+}
+.camp {
+    width: 45vw;
+}
+
+.camp_email {
+    width: 90vw;
+
+}
+#text_contato {
+    width: 95vw;
+}
+h3 {
+    width: 95vw;
+}
+table#contato {
+    width: 95vw;
+}
+input {
+    width: 50vw;
+}
+textarea {
+    padding: 0;
+    margin: 0;
+    width: 90vw;
+}
 }
 </style>
