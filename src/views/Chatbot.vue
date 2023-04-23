@@ -75,6 +75,7 @@ export default {
               // Levar scroll para o final
               historico_box.scrollTop = historico_box.scrollHeight
             }
+            
         }
     }
 </script>
