@@ -2,13 +2,13 @@
     <div id="ChatbotNumbers">
         <h1>CHATBOT</h1>
         <p>Um chatbot é uma tecnologia que simula uma conversa humana com começo, meio e fim, podendo envolver Inteligência Artificial (IA) e Machine Learning e com a tecnologia NLP permite uma comunicação mais humanizada assim parecendo que está conversando com uma pessoa de verdade. Os chatbots são capazes de entender as perguntas do cliente e dar a resposta necessária de forma automática e rápida, além disso, os chatbots também possibilitam um atendimento de 24 horas por dia.
-</p>
+        </p>
         <hr>
             <table id="chat_table">
                 <tr>
-                    <td><img id="qa" src="img/qa.png"></td>
-                    <td><img id="qa" src="img/web_chat.png"></td>
-                    <td><img id="qa" src="img/moedas.png"></td>
+                    <td><img class="img" src="img/qa.png"></td>
+                    <td><img class="img" src="img/web_chat.png"></td>
+                    <td><img class="img" src="img/moedas.png"></td>
                 </tr>
                 <tr>
                     <td class="numbers">+8000</td>
@@ -59,9 +59,20 @@ hr {
     margin: 35px auto 70px auto;
     width: 100%;
 }
+.img {
+    width: 13vw;
+}
 .numbers{
-    font-size: 70px;
+    font-size: 2rem;
     font-family: "fontelogo", sans-serif;
     font-weight: bold;
+}
+@media screen and (max-width: 500px){
+table#chat_table{
+    display: none;
+}
+hr {
+    display: none;
+}
 }
 </style>

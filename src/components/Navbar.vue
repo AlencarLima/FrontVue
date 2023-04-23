@@ -2,7 +2,7 @@
     <nav id="menu">
         <ul>
             <li><router-link to="/chatbot">Chatbot</router-link></li>
-            <li><router-link to="/ChatbotNumbers">Interações Medicamentosas</router-link></li>
+            <li><router-link to="/">Interações Medicamentosas</router-link></li>
             <li><router-link to="/">Sobre</router-link></li>
             <li><router-link to="/">Contato</router-link></li>
         </ul>
@@ -27,5 +27,10 @@ nav#menu li{
     font-family: "fontelogo", sans-serif;
     display: inline-block;
     padding: 30px;
+}
+@media screen and (max-width: 500px){
+nav#menu {
+    display: none;
+}
 }
 </style>
