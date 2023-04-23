@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
         name: 'MostrarMais',
         props: {
@@ -45,7 +46,20 @@ export default {
             }
         },
         methods: {
-            MostrarMensagem() {
+          async fetchRespostaDaAPI(mensagem) {
+            try {
+              // Realizar chamada de API GET usando axios
+              const response = await axios.get('http://localhost:80/gpt/' + mensagem);
+              // Retornar o valor da resposta
+              return response.data.input_text;
+            } catch (error) {
+              // Tratar erros da API
+              console.error(error);
+              // Retornar uma mensagem de erro, ou um valor padrão, se necessário
+              return 'Erro ao obter resposta da API';
+            }
+          },
+          async MostrarMensagem() {
               this.aparecer = false
               this.aparecer_historico = true
               var mensagem = document.getElementById('input_mensagem').value
@@ -70,12 +84,17 @@ export default {
               // resposta_chat.innerHTML = resposta
               if (mensagem == "") {
                 resposta_chat.innerHTML = 'Por favor, digite uma pergunta!'
-                
               }
               else {
-                resposta_chat.innerHTML = 'Resposta do Chatbot'
+                this.fetchRespostaDaAPI(mensagem).then(resposta => {
+                  resposta_chat.innerHTML = resposta;
+                  box_resposta_ia.appendChild(resposta_chat);
+                  historico_box.appendChild(box_resposta_ia);
+
+                  // Levar scroll para o final
+                  historico_box.scrollTop = historico_box.scrollHeight;
+                })
               }
-               
               box_resposta_ia.appendChild(resposta_chat)
               historico_box.appendChild(box_resposta_ia)
 
