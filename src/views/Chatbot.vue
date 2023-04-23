@@ -109,7 +109,9 @@ img#logo {
 img#btn-submit {
   width: 20px;
   padding: 5px;
-  
+  position: relative;
+  top: 10px;
+  left: -30px;
 }
 .box {
     position: fixed;
@@ -129,11 +131,10 @@ td.exemplo{
   padding: 1% 2%;
 }
 .footer {
-  text-align: center;
   padding: 5%;
 }
 input {
-  width: 75%;
+  width: 80%;
   background-color: #073036;
   border-radius: 5px;
   padding: 5px;
