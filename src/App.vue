@@ -15,7 +15,7 @@
 <style>
 @charset "UTF-8";
 body {
-
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     margin-bottom: 0px;
     padding: 0;

@@ -1,8 +1,7 @@
 <template>
     <div id="ChatbotNumbers">
         <h1>CHATBOT</h1>
-        <p>Um chatbot é uma tecnologia que simula uma conversa humana com começo, meio e fim, podendo envolver Inteligência Artificial (IA) e Machine Learning e com a tecnologia NLP permite uma comunicação mais humanizada assim parecendo que está conversando com uma pessoa de verdade. Os chatbots são capazes de entender as perguntas do cliente e dar a resposta necessária de forma automática e rápida, além disso, os chatbots também possibilitam um atendimento de 24 horas por dia.
-        </p>
+        <p>Um chatbot é uma tecnologia que simula uma conversa humana com começo, meio e fim, podendo envolver Inteligência Artificial (IA) e Machine Learning e com a tecnologia NLP permite uma comunicação mais humanizada assim parecendo que está conversando com uma pessoa de verdade. Os chatbots são capazes de entender as perguntas do cliente e dar a resposta necessária de forma automática e rápida, além disso, os chatbots também possibilitam um atendimento de 24 horas por dia.</p>
         <hr>
             <table id="chat_table">
                 <tr>

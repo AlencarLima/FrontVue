@@ -3,7 +3,7 @@
         <div id="leftside">
             <h1>ENTRE EM CONTATO</h1>
             <p id="text_contato">Tem alguma dúvida ou sugestão? Nos envie uma mensagem ou visite nossa sede.Estamos prontos para falar com você.</p>
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <h3>Sede: Av. dos Estados, 5001 - Bangú, Santo André - SP, 09210-580</h3>
         </div>
         
         <table id="contato">
