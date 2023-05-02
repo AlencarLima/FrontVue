@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
         name: 'MostrarMais',
         props: {
@@ -45,44 +46,75 @@ export default {
             }
         },
         methods: {
-            MostrarMensagem() {
-              this.aparecer = false
-              this.aparecer_historico = true
-              var mensagem = document.getElementById('input_mensagem').value
-              
-              var historico_box = document.getElementById('historico')
-
-              var box_mensagem_usuario = document.createElement('div')
-              box_mensagem_usuario.className = 'box_mensagem'
-
-              var mensagem_usuario = document.createElement('p')
-              mensagem_usuario.className = 'mensage_usuario'
-              mensagem_usuario.innerHTML = mensagem
-
-              box_mensagem_usuario.appendChild(mensagem_usuario)
-              historico_box.appendChild(box_mensagem_usuario)
-
-              var box_resposta_ia = document.createElement('div')
-              box_resposta_ia.className = 'box_mensagem_ia'
-
-              var resposta_chat = document.createElement('p')
-              resposta_chat.className = 'mensagem_resposta'
-              // resposta_chat.innerHTML = resposta
-              if (mensagem == "") {
-                resposta_chat.innerHTML = 'Por favor, digite uma pergunta!'
-                
+          async fetchRespostaDaAPI(mensagem) {
+            try {
+              // Realizar chamada de API GET usando fetch
+              const response = await fetch('http://172.31.38.229:8000/gpt/' + mensagem);
+              // Verificar se a resposta está ok
+              if (response.ok) {
+                // Converter a resposta para JSON
+                const data = await response.json();
+                // Retornar o valor da resposta
+                return data.input_text;
+              } else {
+                // Retornar uma mensagem de erro, ou um valor padrão, se necessário
+                return 'Erro ao obter resposta da API';
               }
-              else {
-                resposta_chat.innerHTML = 'Resposta do Chatbot'
-              }
-               
-              box_resposta_ia.appendChild(resposta_chat)
-              historico_box.appendChild(box_resposta_ia)
-
-              // Levar scroll para o final
-              historico_box.scrollTop = historico_box.scrollHeight
+            } catch (error) {
+              // Tratar erros da API
+              console.error(error);
+              // Retornar uma mensagem de erro, ou um valor padrão, se necessário
+              return 'Erro ao obter resposta da API';
             }
-            
+          },
+
+          async MostrarMensagem() {
+            this.aparecer = false;
+            this.aparecer_historico = true;
+            var mensagem = document.getElementById('input_mensagem').value;
+
+            var historico_box = document.getElementById('historico');
+
+            var box_mensagem_usuario = document.createElement('div');
+            box_mensagem_usuario.className = 'box_mensagem';
+
+            var mensagem_usuario = document.createElement('p');
+            mensagem_usuario.className = 'mensage_usuario';
+            mensagem_usuario.innerHTML = mensagem;
+
+            box_mensagem_usuario.appendChild(mensagem_usuario);
+            historico_box.appendChild(box_mensagem_usuario);
+
+            var box_resposta_ia = document.createElement('div');
+            box_resposta_ia.className = 'box_mensagem_ia';
+
+            var resposta_chat = document.createElement('p');
+            resposta_chat.className = 'mensagem_resposta';
+
+            if (mensagem == '') {
+              resposta_chat.innerHTML = 'Por favor, digite uma pergunta!';
+            } else {
+              try {
+                const resposta = await this.fetchRespostaDaAPI(mensagem);
+                resposta_chat.innerHTML = resposta;
+                box_resposta_ia.appendChild(resposta_chat);
+                historico_box.appendChild(box_resposta_ia);
+
+                // Levar scroll para o final
+                historico_box.scrollTop = historico_box.scrollHeight;
+              } catch (error) {
+                console.error(error);
+                resposta_chat.innerHTML = 'Erro ao obter resposta da API';
+                box_resposta_ia.appendChild(resposta_chat);
+                historico_box.appendChild(box_resposta_ia);
+              }
+            }
+            box_resposta_ia.appendChild(resposta_chat);
+            historico_box.appendChild(box_resposta_ia);
+
+            // Levar scroll para o final
+            historico_box.scrollTop = historico_box.scrollHeight;
+          }
         }
     }
 </script>
